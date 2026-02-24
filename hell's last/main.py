@@ -1,3 +1,4 @@
+from typing import Optional, Callable
 import tkinter as tk
 from tkinter import messagebox
 import player_data as pd
@@ -392,4 +393,5 @@ if __name__ == "__main__":
         "card_names": [],
         "battle_ready": False
     }
+
     show_character_select()
