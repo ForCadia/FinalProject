@@ -394,3 +394,17 @@ if __name__ == "__main__":
     }
 
     show_character_select()
+
+# 只运行逻辑，不触发 GUI
+def run_game_cli():
+    import weapon_data as wd
+    import player_data as pd
+    # 测试加载武器
+    wd.load_weapons()
+    print("✅ 武器 CSV 加载成功！")
+    # 你可以继续调用其他函数逻辑，但不要 Tkinter 窗口
+    # e.g., show_weapon_shop() → 只打印武器列表，不 Tkinter
+
+# 入口
+if __name__ == "__main__":
+    run_game_cli()
