@@ -5,7 +5,7 @@ import explore_core as ec
 import os
 import sys
 import weapon_data as wd
-
+from typing import Optional, Callable
 # ===================== 【核心修复】永远定位到当前代码所在文件夹 =====================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -19,7 +19,7 @@ card_list = []
 PURCHASED_CARDS = {}
 
 # ===================== 武器商店 =====================
-def show_weapon_shop(after_callback: callable | None = None) -> None:
+def show_weapon_shop(after_callback: Optional[Callable] = None) -> None:
     try:
         wd.load_weapons()
     except Exception as e:
@@ -392,4 +392,5 @@ if __name__ == "__main__":
         "card_names": [],
         "battle_ready": False
     }
+
     show_character_select()
