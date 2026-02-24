@@ -20,7 +20,7 @@ card_list = []
 PURCHASED_CARDS = {}
 
 # ===================== 武器商店 =====================
-def show_weapon_shop(after_callback: callable | None = None) -> None:
+def show_weapon_shop(after_callback: Optional[Callable] = None) -> None:
     try:
         wd.load_weapons()
     except Exception as e:
@@ -395,3 +395,4 @@ if __name__ == "__main__":
     }
 
     show_character_select()
+
